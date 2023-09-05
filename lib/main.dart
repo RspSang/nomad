@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nomad/constants/sizes.dart';
 import 'package:nomad/features/authentication/sign_up_screen.dart';
 
 void main() {
@@ -14,6 +15,17 @@ class TikTokApp extends StatelessWidget {
     return MaterialApp(
       title: 'TikTok',
       theme: ThemeData(
+        scaffoldBackgroundColor: Colors.white,
+        appBarTheme: const AppBarTheme(
+          elevation: 0,
+          foregroundColor: Colors.black,
+          backgroundColor: Colors.white,
+          titleTextStyle: TextStyle(
+            color: Colors.black,
+            fontSize: Sizes.size16 + Sizes.size2,
+            fontWeight: FontWeight.w600,
+          ),
+        ),
         primaryColor: const Color(0xFFE9435A),
       ),
       home: const SignUpScreen(),
