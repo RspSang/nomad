@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:nomad/constants/gaps.dart';
 import 'package:nomad/constants/sizes.dart';
+import 'package:nomad/features/authentication/birthday_screen.dart';
 import 'package:nomad/features/authentication/widgets/form_button.dart';
 
 class PasswordScreen extends StatefulWidget {
@@ -41,10 +42,12 @@ class _PasswordScreenState extends State<PasswordScreen> {
   }
 
   void _onSubmit() {
-    if (_password.isEmpty || _isPasswordValid()) return;
+    if (!_isPasswordValid()) return;
     Navigator.push(
       context,
-      MaterialPageRoute(builder: (context) => const PasswordScreen()),
+      MaterialPageRoute(
+        builder: (context) => const BirthdayScreen(),
+      ),
     );
   }
 
